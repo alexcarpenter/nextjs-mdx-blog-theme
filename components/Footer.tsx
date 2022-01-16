@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
         <ul className="flex justify-center space-x-4">
           {Object.entries(siteConfig.social).map(([key, href]) => {
             return (
-              <li>
+              <li key={key}>
                 <a
                   href={href}
                   className={cx(
