@@ -1,2 +1,3 @@
 import clsx from "clsx";
-export { clsx as cx };
+import slugify from "@sindresorhus/slugify";
+export { slugify, clsx as cx };

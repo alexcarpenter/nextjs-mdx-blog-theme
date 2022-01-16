@@ -7,7 +7,7 @@ import { cx } from "@/lib/utils";
 
 interface PageProps {
   date?: string;
-  title: string;
+  title: string | React.ReactNode;
   description?: string | React.ReactNode;
 }
 
@@ -17,18 +17,25 @@ export const Page: React.FC<PageProps> = ({
   description,
   children,
 }) => {
+  const titleText = onlyText(title);
   const descriptionText = onlyText(description);
   return (
     <>
       <Head>
         <title>
-          {title} - {siteConfig.siteName}
+          {titleText} - {siteConfig.siteName}
         </title>
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={titleText} />
         <meta name="description" content={descriptionText} />
         <meta name="og:description" content={descriptionText} />
       </Head>
-      <header className={cx("mb-8 pb-8 border-b", "dark:border-gray-700")}>
+      <header
+        className={cx(
+          "mb-8 pb-8 border-b",
+          "border-gray-200",
+          "dark:border-gray-700"
+        )}
+      >
         {date ? (
           <time
             className={cx("block mb-2", "text-gray-500", "dark:text-gray-400")}
