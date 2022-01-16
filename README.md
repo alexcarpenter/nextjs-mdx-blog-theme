@@ -2,6 +2,7 @@
 
 # nextjs-mdx-blog-theme
 
+- **View**: [demo site](https://nextjs-mdx-blog-theme.vercel.app/)
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Deployment**: [Vercel](https://vercel.com)
 - **Content**: [MDX](https://github.com/mdx-js/mdx)
