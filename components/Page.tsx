@@ -17,17 +17,19 @@ export const Page: React.FC<PageProps> = ({
   description,
   children,
 }) => {
-  const titleText = onlyText(title);
-  const descriptionText = onlyText(description);
+  const metaTitle = onlyText(title);
+  const metaDescription = description
+    ? onlyText(description)
+    : siteConfig.siteDescription;
   return (
     <>
       <Head>
         <title>
-          {titleText} - {siteConfig.siteName}
+          {metaTitle} - {siteConfig.siteName}
         </title>
-        <meta property="og:title" content={titleText} />
-        <meta name="description" content={descriptionText} />
-        <meta name="og:description" content={descriptionText} />
+        <meta property="og:title" content={metaTitle} />
+        <meta name="description" content={metaDescription} />
+        <meta name="og:description" content={metaDescription} />
       </Head>
       <header
         className={cx(
