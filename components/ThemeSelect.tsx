@@ -27,7 +27,7 @@ export const ThemeSelect = () => {
 
   if (!mounted) return null;
 
-  const handleChange = (e: { target: { value: string } }) =>
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) =>
     setTheme(e.target.value);
 
   return (
@@ -38,7 +38,7 @@ export const ThemeSelect = () => {
       <span
         aria-hidden={true}
         className={cx(
-          "absolute top-1/2 -translate-y-1/2 left-2 pointer-events-none textSecondary",
+          "absolute top-1/2 -translate-y-1/2 left-2 pointer-events-none",
           "opacity-50"
         )}
       >
@@ -48,10 +48,7 @@ export const ThemeSelect = () => {
         aria-hidden={true}
         className="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none"
       >
-        <Code
-          width=".9em"
-          className={cx("rotate-90", "textSecondary", "opacity-50")}
-        />
+        <Code width=".9em" className="rotate-90 opacity-50" />
       </span>
       <select
         id="theme-menu"
