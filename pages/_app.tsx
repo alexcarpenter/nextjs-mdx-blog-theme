@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     >
       <a
         href="#main"
-        className="fixed top-0 left-0 -translate-y-full focus:translate-y-0"
+        className="fixed p-2 top-0 left-0 -translate-y-full focus:translate-y-0"
       >
         Skip to main content
       </a>
