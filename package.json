@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:watch": "next-remote-watch ./posts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -14,6 +15,7 @@
     "gray-matter": "^4.0.3",
     "next": "12.0.8",
     "next-mdx-remote": "^3.1.0-alpha.2",
+    "next-remote-watch": "^1.0.0",
     "next-themes": "^0.0.15",
     "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",
