@@ -14,7 +14,7 @@
 $ git clone https://github.com/alexcarpenter/nextjs-mdx-blog-theme
 $ cd nextjs-mdx-blog-theme
 $ npm install
-$ npm run dev
+$ npm run dev:watch
 ```
 
 ## Styling
