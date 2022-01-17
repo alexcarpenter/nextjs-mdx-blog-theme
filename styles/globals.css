@@ -69,8 +69,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  color: white;
-  background: #011627;
+  @apply text-gray-50 border bg-gray-900 border-gray-700;
 }
 
 :not(pre) > code[class*="language-"] {
