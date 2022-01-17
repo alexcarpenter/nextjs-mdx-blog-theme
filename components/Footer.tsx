@@ -5,12 +5,12 @@ import { ThemeSelect } from "@/components/ThemeSelect";
 
 const iconProps = { className: "w-4 h-4" };
 
-const SOCIAL_ICONS = {
+const SOCIAL_ICONS: { [key: string]: React.ReactNode } = {
   twitter: <Twitter {...iconProps} />,
   instagram: <Instagram {...iconProps} />,
   github: <GitHub {...iconProps} />,
   linkedin: <Linkedin {...iconProps} />,
-} as any;
+};
 
 export const Footer: React.FC = () => {
   return (
