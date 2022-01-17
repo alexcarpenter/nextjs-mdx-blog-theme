@@ -1,7 +1,9 @@
 export type SiteConfig = {
   avatar?: string;
+  siteUrl: string;
   siteName: string;
   siteDescription: string;
+  siteThumbnail: string;
   nav: Array<{ label: string; href: string }>;
   social?: {
     github?: string;

@@ -9,27 +9,35 @@ interface PageProps {
   date?: string;
   title: string | React.ReactNode;
   description?: string | React.ReactNode;
+  thumbnail?: string;
 }
 
 export const Page: React.FC<PageProps> = ({
   date,
   title,
   description,
+  thumbnail,
   children,
 }) => {
   const metaTitle = onlyText(title);
   const metaDescription = description
     ? onlyText(description)
     : siteConfig.siteDescription;
+  const metaThumbnail = thumbnail ? thumbnail : siteConfig.siteThumbnail;
   return (
     <>
       <Head>
         <title>
           {metaTitle} - {siteConfig.siteName}
         </title>
+        <meta name="og:url" content={siteConfig.siteUrl} />
         <meta property="og:title" content={metaTitle} />
         <meta name="description" content={metaDescription} />
         <meta name="og:description" content={metaDescription} />
+        <meta
+          property="og:image"
+          content={`siteConfig.siteUrl${metaThumbnail}`}
+        />
       </Head>
       <header
         className={cx(
