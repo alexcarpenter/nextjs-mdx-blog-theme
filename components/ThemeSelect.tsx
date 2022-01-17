@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import { Command, Sun, Moon, Code } from "react-feather";
 import { cx } from "@/lib/utils";
 
-const THEME_MAP = {
+const THEME_MAP: { [key: string]: { label: string; icon: React.ReactNode } } = {
   system: {
     label: "System",
     icon: <Command width=".9em" />,
@@ -42,8 +42,7 @@ export const ThemeSelect = () => {
           "opacity-50"
         )}
       >
-        {/* @ts-ignore */}
-        {THEME_MAP[activeTheme].icon}
+        {THEME_MAP[activeTheme!].icon}
       </span>
       <span
         aria-hidden={true}
@@ -67,7 +66,6 @@ export const ThemeSelect = () => {
         {themes.map((theme) => {
           return (
             <option key={theme} value={theme}>
-              {/* @ts-ignore */}
               {THEME_MAP[theme].label}
             </option>
           );
