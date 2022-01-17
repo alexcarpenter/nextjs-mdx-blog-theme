@@ -36,7 +36,7 @@ export const Page: React.FC<PageProps> = ({
         <meta name="og:description" content={metaDescription} />
         <meta
           property="og:image"
-          content={`siteConfig.siteUrl${metaThumbnail}`}
+          content={`${siteConfig.siteUrl}${metaThumbnail}`}
         />
       </Head>
       <header

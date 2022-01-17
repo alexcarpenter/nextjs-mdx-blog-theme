@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/lib/types";
 export default {
   avatar: "/avatar.png",
-  siteUrl: "https://nextjs-mdx-blog-theme.vercel.app/",
+  siteUrl: "https://nextjs-mdx-blog-theme.vercel.app",
   siteName: "Alex Carpenter",
   siteDescription:
     "Starter template for a personal website blog, built with Next.js, MDX, and Tailwind CSS.",
