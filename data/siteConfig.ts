@@ -1,6 +1,6 @@
 import type { SiteConfig } from "@/lib/types";
 export default {
-  avatar: "/mesh-gradient.png",
+  avatar: "/avatar.png",
   siteUrl: "https://nextjs-mdx-blog-theme.vercel.app/",
   siteName: "Alex Carpenter",
   siteDescription:

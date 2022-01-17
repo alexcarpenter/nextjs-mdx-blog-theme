@@ -18,6 +18,7 @@ export const Header: React.FC = () => {
                 width={48}
                 height={48}
                 alt={siteConfig.siteName}
+                priority
               />
             </span>
           ) : (
