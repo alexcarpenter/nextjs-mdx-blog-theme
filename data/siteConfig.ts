@@ -1,5 +1,5 @@
 import type { SiteConfig } from "@/lib/types";
-export default {
+const siteConfig: SiteConfig = {
   avatar: "/avatar.png",
   siteUrl: "https://nextjs-mdx-blog-theme.vercel.app",
   siteName: "Alex Carpenter",
@@ -16,4 +16,5 @@ export default {
     linkedin: "https://www.linkedin.com/in/imalexcarpenter/",
     instagram: "https://www.instagram.com/alexcarp/",
   },
-} as SiteConfig;
+};
+export default siteConfig;
