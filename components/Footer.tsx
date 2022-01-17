@@ -27,6 +27,7 @@ export const Footer: React.FC = () => {
                     "bg-gray-900 text-gray-50",
                     "dark:bg-gray-800 dark:text-gray-50"
                   )}
+                  title={key}
                 >
                   {SOCIAL_ICONS[key]}
                 </a>
