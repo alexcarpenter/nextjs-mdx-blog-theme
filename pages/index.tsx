@@ -18,12 +18,11 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         description={
           <>
             <p>
-              Lorem ipsum dolor sit, amet <a href="">consectetur adipisicing</a>{" "}
-              elit. Molestiae, facilis.
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Molestiae, facilis.
+              View the source code on{" "}
+              <a href="https://github.com/alexcarpenter/nextjs-mdx-blog-theme">
+                Github
+              </a>
+              .
             </p>
           </>
         }
