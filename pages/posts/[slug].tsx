@@ -10,7 +10,7 @@ import { Page } from "@/components/Page";
 import { components } from "@/components/MDX";
 import { Prose } from "@/components/Prose";
 import { cx } from "@/lib/utils";
-
+import remarkGfm from "remark-gfm";
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
 }
@@ -48,8 +48,8 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) => {
                 >
                   Previous
                 </p>
-                <Link href={`/posts/${previous?.slug}`}>
-                  <a className="font-bold">{previous?.title}</a>
+                <Link href={`/posts/${previous?.slug}`} className="font-bold">
+                  {previous?.title}
                 </Link>
               </div>
             ) : null}
@@ -64,8 +64,8 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) => {
                 >
                   Next
                 </p>
-                <Link href={`/posts/${next?.slug}`}>
-                  <a className="font-bold">{next?.title}</a>
+                <Link href={`/posts/${next?.slug}`} className="font-bold">
+                  {next?.title}
                 </Link>
               </div>
             ) : null}
@@ -94,7 +94,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { frontMatter, content } = post;
   const mdxContent = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [],
+      remarkPlugins: [remarkGfm],
       rehypePlugins: [rehypePrism],
     },
     scope: frontMatter,

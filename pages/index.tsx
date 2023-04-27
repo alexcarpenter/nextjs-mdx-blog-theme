@@ -29,14 +29,16 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       >
         <PostList posts={posts} />
         <div className="mt-8">
-          <Link href="/posts">
-            <a className="group inline-flex items-center gap-2 text-pink-600">
-              View more posts{" "}
-              <ArrowRight
-                className="group-hover:translate-x-0.5 transition-transform"
-                width={".9em"}
-              />
-            </a>
+          <Link
+            passHref
+            href="/posts"
+            className="group inline-flex items-center gap-2 text-pink-600"
+          >
+            View more posts{" "}
+            <ArrowRight
+              className="group-hover:translate-x-0.5 transition-transform"
+              width={".9em"}
+            />
           </Link>
         </div>
       </Page>
