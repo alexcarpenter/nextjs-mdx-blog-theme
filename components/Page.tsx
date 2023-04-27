@@ -10,6 +10,7 @@ interface PageProps {
   title: string | React.ReactNode;
   description?: string | React.ReactNode;
   thumbnail?: string;
+  children: React.ReactNode;
 }
 
 export const Page: React.FC<PageProps> = ({
