@@ -6,6 +6,8 @@ import { MDXRemote } from "next-mdx-remote";
 import rehypePrism from "rehype-prism-plus";
 import { getAllMdx, getMdx } from "@/lib/mdx";
 import { MDXFrontMatter } from "@/lib/types";
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
 import { Page } from "@/components/Page";
 import { components } from "@/components/MDX";
 import { Prose } from "@/components/Prose";
@@ -94,8 +96,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { frontMatter, content } = post;
   const mdxContent = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypePrism],
+      remarkPlugins: [remarkGfm, remarkMath],
+      rehypePlugins: [rehypePrism, rehypeKatex],
     },
     scope: frontMatter,
   });
